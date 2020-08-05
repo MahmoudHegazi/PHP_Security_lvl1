@@ -1,5 +1,20 @@
 # PHP_Security_lvl1
 
+#reg_part
+
+PHP - Validate Name
+The code below shows a simple way to check if the name field only contains letters and whitespace. If the value of the name field is not valid, then store an error message:
+```php
+$name = test_input($_POST["name"]);
+if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed";
+}
+
+```
+
+
+
+## hacking part
 Big Note on PHP Form Security
 The $_SERVER["PHP_SELF"] variable can be used by hackers!
 
